@@ -75,7 +75,7 @@ fun ErrorScreen(retryAction: () -> Unit, modifier: Modifier = Modifier) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Image(
-            painter = painterResource(id = R.drawable.ic_connection_error), contentDescription = ""
+            painter = painterResource(id = R.drawable.ic_connection_error), contentDescription = null
         )
         Text(text = stringResource(R.string.loading_failed), modifier = Modifier.padding(16.dp))
         Button(onClick = retryAction) {
@@ -129,13 +129,13 @@ fun PhotosGridScreen(
         modifier = modifier.padding(horizontal = 4.dp),
         contentPadding = contentPadding,
     ) {
-        items(items = photos, key = { photo -> photo.id }) {
-                photo -> MarsPhotoCard(
-            photo,
-            modifier = modifier
-                .padding(4.dp)
-                .fillMaxWidth()
-                .aspectRatio(1.5f)
+        items(items = photos, key = { photo -> photo.id }) { photo ->
+            MarsPhotoCard(
+                photo = photo,
+                modifier = modifier
+                    .padding(4.dp)
+                    .fillMaxWidth()
+                    .aspectRatio(1.5f)
         )
         }
     }

@@ -21,7 +21,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.marsphotos.data.MarsPhotosRepository
-import com.example.marsphotos.network.MarsApi
 import kotlinx.coroutines.launch
 import java.io.IOException
 import androidx.lifecycle.ViewModelProvider
